@@ -121,7 +121,7 @@ const Home = () => {
                 <FontAwesomeIcon className="hero-card__icon" icon="fa-solid fa-keyboard" /> Aspiring Software Engineer
             </li>
             <li className="hero__card-list__item">
-                <FontAwesomeIcon className="hero-card__icon" icon="fa-solid fa-briefcase" /> Owner of Klau-Technology
+                <FontAwesomeIcon className="hero-card__icon" icon="fa-solid fa-briefcase" /> Business Oriented
             </li>
         </ul>}
         cName="hero__card"
@@ -145,7 +145,7 @@ const Home = () => {
                 </li>
                 <li className="hero__card-list__item">
                     <FontAwesomeIcon className="hero-card__icon" icon="fa-solid fa-user" /> Favorite Campus Activites -
-                    Attending Lectures covering Comp-Sci or Finance, Playing Physical Sports.
+                    Attending Lectures covering Comp-Sci or Finance, Reading, and Playing Basketball.
                 </li>
             </ul>}
             cName="school__card"
@@ -185,7 +185,7 @@ const Home = () => {
                     Python, Java, Javascript, HTML, CSS, ReactJS, Bootstrap.
                 </li>
                 <li className="hero__card-list__item">
-                    <FontAwesomeIcon className="hero-card__icon" icon="fa-solid fa-clipboardh" /> Familiarity In -
+                    <FontAwesomeIcon className="hero-card__icon" icon="fa-solid fa-clipboard" /> Familiarity In -
                     Django, MySQL, Firebase.
                 </li>
                 <li className="hero__card-list__item">
@@ -217,6 +217,27 @@ const Home = () => {
                 </li>
                 <li className="hero__card-list__item">
                     <a href="/#klautech">More Info</a>
+                </li>
+            </ul>}
+            cName="project__card"
+            handleRotate={handleRotate}
+            location=""
+        />
+
+    const selfOptimalCard =
+        <RotateCard
+            title={<>selfOptimal</>}
+            body={<ul className="hero__card-list list-sm">
+                <li className="hero__card-list__item">
+                    <FontAwesomeIcon className="hero-card__icon" icon="fa-solid fa-chart-simple" /> Website is writtin with ReactJS,
+                    JavaScript, HTML, and CSS.
+                </li>
+                <li className="hero__card-list__item">
+                    <FontAwesomeIcon className="hero-card__icon" icon="fa-solid fa-database" /> Utilizes the same Firebase implemtation as my 'Klau-Technology' project; However,
+                    this required much more database querying and sorting as users have the ability to: Log Workouts, View Graphs of Their Workout Data, Create Custom Routines, and Much More.
+                </li>
+                <li className="hero__card-list__item">
+                    <a href="/#selfOptimal">More Info</a>
                 </li>
             </ul>}
             cName="project__card"
@@ -286,7 +307,7 @@ const Home = () => {
     });
 
     // Project Item List
-    const projectItemList = [klauTechCard, forbesCard, weatherCard];
+    const projectItemList = [klauTechCard, forbesCard, selfOptimalCard, weatherCard];
     const [projectListIndex, setProjectListIndex] = useState(0);
     const [projectVisible, setProjectVisible] = useState(true);
     const projectTransition = useTransition(projectVisible, {
@@ -371,8 +392,8 @@ const Home = () => {
                         <SkillsCard
                             skillName="Java"
                             skillBody={<div>
-                                Majority of my experience learning Java has been at the University of Oklahoma. I have built numerous programs and learned
-                                concepts such as Inheritance, Polymorphism, and Object-Oriented-Programming, all within Java.
+                                Majority of my experience learning Java has been at the University of Oklahoma. I have built numerous programs and learned key
+                                concepts such as Inheritance, Encapsulation, Polymorphism, and Object-Oriented-Programming - all within Java.
                             </div>}
                             icon={<FontAwesomeIcon className="hero-card__icon" icon="fa-brands fa-java" />}
                         />
@@ -423,7 +444,7 @@ const Home = () => {
                             skills in multiple languages, Gain more financial knowledge, Increase my overall outlook on the troubleshooting process for programming
                             problems or issues, and much more. To visit the site and test out its features, go <a href="https://klautechnology.com/" target="_blank" rel="noreferrer">Here</a>.</p>
                     </div>
-                    <div className="project projects__item border-btm">
+                    <div className="project projects__item border-btm" id="selfOptimal">
                         <h1 className="project__header">selfOptimal</h1>
                         <p className="project__body">selfOptimal has one main purpose, to provide everyone in the fitness community with an easier way to:
                             Log their Workouts, View their Progress, and Research Scientific Data related to their needs. While this website is currently still in production, I
