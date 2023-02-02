@@ -362,9 +362,9 @@ const Home = () => {
                         Learning.
                     </p>
                     <p>
-                        Along with my programming interests, I also have large interests in Finance and Business. My current business - Klau Technology -
-                        is focused on providing service-based businesses with their own websites. My goal with the business is to learn as much as I can
-                        about Programming, Finance, and Quality Business Practice.
+                        Along with my programming interests, I also have large interests in Finance and Business. Currently I am working on my own start-up 'selfOptimal,' which
+                        aims to provide users with an easy way to log workouts, view progression, and research scientific articles related to their needs. My overall goal with selfOptimal is to learn
+                        more about all areas of Programming and Business -while creating something that I actually stand for.
                     </p>
                 </div>
                 <div className="my-skills" id="skills" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">

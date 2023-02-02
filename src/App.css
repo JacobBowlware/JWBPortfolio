@@ -91,6 +91,16 @@ html {
   justify-content: flex-start;
 }
 
+.footer__body-text {
+  color: var(--var-color-ivory);
+  transition: all .3s;
+}
+
+.footer__body-text:hover {
+  text-decoration: none;
+  color: var(--var-color-background);
+}
+
 @media screen and (min-width: 768px) {
   .footer__body {
     flex-direction: row;
@@ -362,7 +372,6 @@ html {
 .projects {
   background: var(--var-color-ivory);
   height: 750px;
-  padding-top: 12rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -370,7 +379,7 @@ html {
 }
 
 #projects {
-  padding-top: 6rem;
+  padding-top: 12rem;
 }
 
 .projects__header {
