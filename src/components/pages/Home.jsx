@@ -39,7 +39,6 @@ const Home = () => {
 
 
     const handleRotate = (direction, location) => {
-        // Location is truthy, user is clicking the hero cards.
         if (location) {
             // Direction === 0 --> User pressed 'arrow left'
             // Rotate list of items to left.
@@ -53,7 +52,6 @@ const Home = () => {
                     setItemVisible(v => !v);
                 }, 750);
             }
-            // Rotate list of items to right.
             else {
                 setFromX(1000);
                 setLeaveX(-1000);
@@ -79,7 +77,6 @@ const Home = () => {
                     setProjectVisible(v => !v);
                 }, 750);
             }
-            // Rotate list of items to right.
             else {
                 setFromX(1000);
                 setLeaveX(-1000);
@@ -296,7 +293,7 @@ const Home = () => {
         />
     // -------------------End of Card Lists--------------------------
 
-    // Hero Item List
+    // Hero Item List -->
     const itemList = [nameCard, schoolCard, webDevCard, engineerCard];
     const [listIndex, setListIndex] = useState(0);
     const [itemVisible, setItemVisible] = useState(true);
@@ -306,7 +303,7 @@ const Home = () => {
         leave: { x: leaveX, y: 0, opacity: 0 }
     });
 
-    // Project Item List
+    // Project Item List -->
     const projectItemList = [klauTechCard, forbesCard, selfOptimalCard, weatherCard];
     const [projectListIndex, setProjectListIndex] = useState(0);
     const [projectVisible, setProjectVisible] = useState(true);
@@ -316,7 +313,7 @@ const Home = () => {
         leave: { x: leaveX, y: 0, opacity: 0 }
     });
 
-    // Functions/Variables to deal with form change/submit events.
+    // Functions/Variables to deal with form change/submit events -->
     const [userName, setUserName] = useState("");
     const [userPhone, setUserPhone] = useState("");
     const [userEmail, setUserEmail] = useState("");
@@ -327,7 +324,6 @@ const Home = () => {
 
         const dateTime = postedOn();
 
-        // Send user data to Firebase DB.
         const ref = collection(firestore, "contact_form");
         try {
             addDoc(ref, { user_name: userName, email: userEmail, user_phone: userPhone, user_message: userMessage, postedOn: dateTime });
@@ -337,7 +333,6 @@ const Home = () => {
             showToastMessage(false);
             return;
         }
-
         showToastMessage(true);
         setTimeout(() => {
             window.location.reload();
@@ -362,7 +357,7 @@ const Home = () => {
                         Learning.
                     </p>
                     <p>
-                        Along with my programming interests, I also have large interests in Finance and Business. Currently I am working on my own start-up 'selfOptimal,' which
+                        Along with my programming interests, I also have large interests in Finance and Business. Currently I am working on my website 'selfOptimal,' which
                         aims to provide users with an easy way to log workouts, view progression, and research scientific articles related to their needs. My overall goal with selfOptimal is to learn
                         more about all areas of Programming and Business -while creating something that I actually stand for.
                     </p>
