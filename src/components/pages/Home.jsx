@@ -16,6 +16,7 @@ import klauTech from '../images/klauTech.png';
 import forbes400 from '../images/forbes400.png';
 import weatherFetcher from '../images/weatherFetcher.png';
 import selfOptimal from '../images/selfOptimal.png';
+import jwbmedia from '../images/jwbmedia.png';
 
 // Toast/Email Notifications 
 import { ToastContainer, toast } from 'react-toastify';
@@ -25,6 +26,7 @@ import { useForm } from '@formspree/react';
 // AOS animations
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { faCalendar, faDatabase } from '@fortawesome/free-solid-svg-icons';
 
 const Home = () => {
     const [fromX, setFromX] = useState(0);
@@ -157,11 +159,10 @@ const Home = () => {
             body={<ul className="hero__card-list">
                 <li className="hero__card-list__item">
                     <FontAwesomeIcon className="hero-card__icon" icon="fa-solid fa-calendar" /> Primary Language - Javascript
-                    <span className="span-small">- Markup Languages/Libraries - HTML, CSS, React-Js</span>
+                    <span className="span-small"> - Markup Languages/Libraries - HTML, CSS, React-JS</span>
                 </li>
                 <li className="hero__card-list__item">
-                    <FontAwesomeIcon className="hero-card__icon" icon="fa-solid fa-chart-simple" /> My Work -
-                    <a href="https://klautechnology.com/" target="_blank" rel="noreferrer">KlauTechnology.com</a>
+                    <FontAwesomeIcon className="hero-card__icon" icon="fa-solid fa-chart-simple" /> My Work - <a href="/#projects">Click Here</a>
                 </li>
                 <li className="hero__card-list__item">
                     <FontAwesomeIcon className="hero-card__icon" icon="fa-solid fa-user" /> Self Taught
@@ -179,7 +180,7 @@ const Home = () => {
             body={<ul className="hero__card-list">
                 <li className="hero__card-list__item">
                     <FontAwesomeIcon className="hero-card__icon" icon="fa-solid fa-chart-simple" /> Strong Knowledge In -
-                    Python, Java, Javascript, HTML, CSS, ReactJS, Bootstrap.
+                    Python, Java, Javascript, HTML, CSS, ReactJS, Bootstrap, and multiple APIs.
                 </li>
                 <li className="hero__card-list__item">
                     <FontAwesomeIcon className="hero-card__icon" icon="fa-solid fa-clipboard" /> Familiarity In -
@@ -196,6 +197,30 @@ const Home = () => {
         />
 
     // ----------List of items for 'Projects' Area------------- 
+    const jwbMediaCard =
+        <RotateCard
+            title={<>JWB-Media</>}
+            body={<ul className="hero__card-list list-sm">
+                <li className="hero__card-list__item">
+                    <FontAwesomeIcon className="hero-card__icon" icon="fa-solid fa-chart-simple" /> Website is writtin with ReactJS,
+                    JavaScript, HTML, and CSS.
+                </li>
+                <li className="hero__card-list__item">
+                    <FontAwesomeIcon className="hero-card__icon" icon={faCalendar} /> Implemented 'Calendly Calendar' into site so users can
+                    schedule appointments within the website.
+                </li>
+                <li className="hero__card-list__item">
+                    <FontAwesomeIcon className="hero-card__icon" icon={faDatabase} /> Fully optimized to ensure top-quality Google SEO.
+                </li>
+                <li className="hero__card-list__item">
+                    <a href="/#jwb-media">More Info</a>
+                </li>
+            </ul>}
+            cName="project__card"
+            handleRotate={handleRotate}
+            location=""
+        />
+
     const klauTechCard =
         <RotateCard
             title={<>Klau Technology</>}
@@ -304,7 +329,7 @@ const Home = () => {
     });
 
     // Project Item List -->
-    const projectItemList = [klauTechCard, forbesCard, selfOptimalCard, weatherCard];
+    const projectItemList = [jwbMediaCard, klauTechCard, forbesCard, selfOptimalCard, weatherCard];
     const [projectListIndex, setProjectListIndex] = useState(0);
     const [projectVisible, setProjectVisible] = useState(true);
     const projectTransition = useTransition(projectVisible, {
@@ -357,8 +382,7 @@ const Home = () => {
                         Learning.
                     </p>
                     <p>
-                        Along with my programming interests, I also have large interests in Finance and Business. Currently I am working on my website 'selfOptimal,' which
-                        aims to provide users with an easy way to log workouts, view progression, and research scientific articles related to their needs. My overall goal with selfOptimal is to learn
+                        Along with my programming interests, I also have large interests in Finance and Business. My main goal with all of my projects is always to learn
                         more about all areas of Programming and Business -while creating something that I actually stand for.
                     </p>
                 </div>
@@ -431,6 +455,15 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="projects-container" id="klautech">
+                    <div className="project projects__item border-btm">
+                        <h1 className="project__header">JWB-Media</h1>
+                        <p className="project__body">Website created to display my skills and experience when it comes
+                            to programming more 'modern' looking websites. I always strive for improvement, and I believe this website
+                            can show how far I have come in my short journey of programming. On this website, there are some
+                            features I implemented which were forieng to me, such as the fully implemented
+                            calendar scheduling for a seamless user experience. To visit the site and test out its features go <a href="https://jwb-media.com" target="_blank" rel="noreferrer">Here</a>.</p>
+                    </div>
+                    <img className="project__img projects__item" src={jwbmedia} alt="My business website, Klau Technology." />
                     <img className="project__img projects__item" src={klauTech} alt="My business website, Klau Technology." />
                     <div className="project projects__item border-btm">
                         <h1 className="project__header">Klau Technology</h1>
